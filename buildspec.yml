@@ -19,7 +19,6 @@ phases:
       - echo Push the image into docker hub
       - docker login -u kalaikris -p 9629540@kA
       - docker push $name/react:$latest
-      - echo image pushed into docker hub 'date'
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
