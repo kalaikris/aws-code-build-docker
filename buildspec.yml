@@ -12,13 +12,12 @@ phases:
       - echo Build the docker image and pushed to docker hub
   build:
     commands:
-      - sudo systemctl start docker
       - sudo docker pull nginx
       - sudo docker tag react $name/nginx:$latest
   post_build:
     commands:
       - echo Push the image into docker hub
-      - sudo docker login -u kalaikris -p 9629540@kA
+      - docker login -u kalaikris -p 9629540@kA
       - sudo docker push $name/nginx:$latest
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
