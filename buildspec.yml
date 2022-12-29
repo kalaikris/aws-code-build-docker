@@ -12,6 +12,7 @@ phases:
       - echo Build the docker image and pushed to docker hub
   build:
     commands:
+      - docker --version
       - docker pull nginx
       - docker tag react $name/nginx:$latest
   post_build:
