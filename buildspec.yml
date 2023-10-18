@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build the docker image and pushed to docker hub
       - systemctl start docker
-      - docker login -u kalaikris -p 9629540@kA
+      - docker login -u kalaikris -p 9629
   build:
     commands:
       - docker pull nginx
